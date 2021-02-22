@@ -31,6 +31,10 @@ public class ProductController {
 	public List<String> getAllName(){
 		return services.getAllName();
 	}
+	@GetMapping("/products")
+	public List<Product> AllProduct(){
+		return services.AllProduct();
+	}
 	
 	@GetMapping("/id/{id}")
 	public Product findbyId(@PathVariable(value="id") Long id) {

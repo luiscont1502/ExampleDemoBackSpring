@@ -109,9 +109,16 @@ public class ProductServices implements IProductServices{
 	}
 	@Override
 	public int delete(Long id) {
-		String query="delete from student where id_product=?";
+		String query="delete from Products where id_product=?";
 		int res=this.jdbcTemplate.update(query,id);
 		return res;
+	}
+	@Override
+	public List<Product> AllProduct() {
+		
+		return jdbcTemplate.query("select * from Products", new ProductRowMapper());
+
+		
 	}
 
 	

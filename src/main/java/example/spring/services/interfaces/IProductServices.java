@@ -10,6 +10,7 @@ public interface IProductServices {
 	public List<String> getAllName();
 	public Product findbyId(Long id);
 	public List<Product> findByName(String name);
+	public List<Product> AllProduct();
 	public int Insert(Product pr);
 	public int Change(Product pr);
 	public int delete(Long id) ;
